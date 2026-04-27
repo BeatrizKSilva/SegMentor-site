@@ -239,3 +239,199 @@
     background-color: #ffffff;
     color: var(--cor-primaria);
 }
+
+/* --- ESTILOS PARA PÁGINAS INTERNAS --- */
+.hero-interna {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-interna h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-interna p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- PRODUTOS EM FOCO (PJ) --- */
+.produtos-foco {
+    padding: 40px 20px 60px; /* Aumentamos o topo para 100px para dar mais respiro */
+}
+
+.grid-foco {
+    display: grid;
+    /* Força 4 colunas de tamanhos iguais lado a lado no computador */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; /* Reduz o espaço entre as caixas */
+}
+
+.card-foco {
+    background-color: #f9f9f9;
+    padding: 20px; /* Reduz o espaço interno da caixa */
+    border-radius: 8px;
+    border-top: 5px solid var(--cor-secundaris);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card-foco:hover {
+    transform: translateY(-5px);
+}
+
+.icon-foco {
+    font-size: 28px; /* Ícone um pouco menor */
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+}
+
+.card-foco h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+    font-size: 18px; /* Título um pouco menor para caber melhor */
+}
+
+.card-foco ul {
+    list-style: none;
+}
+
+.card-foco ul li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 14px; /* Fonte da lista reduzida */
+}
+
+.card-foco ul li::before {
+    content: '✓';
+    color: var(--cor-secundaris);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.alerta-tooltip {
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #fdf3e7;
+    border-left: 4px solid #e67e22;
+    color: #d35400;
+    font-size: 12px; /* Fonte do alerta reduzida */
+    border-radius: 0 4px 4px 0;
+}
+
+.grid-simples {
+    display: grid;
+    /* Deixa os itens menores para caberem até 5 lado a lado */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+@media (max-width: 1024px) {
+    .grid-foco {
+        grid-template-columns: repeat(2, 1fr); /* 2 lado a lado no tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-foco {
+        grid-template-columns: 1fr; /* 1 embaixo do outro no celular */
+    }
+}
+.alerta-tooltip {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fdf3e7;
+    border-left: 4px solid #e67e22;
+    color: #d35400;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* --- DEMAIS PRODUTOS --- */
+.demais-produtos {
+    background-color: #f0f7f8;
+    padding: 60px 20px;
+}
+
+.grid-simples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.item-simples {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    color: var(--cor-primaria);
+    font-weight: bold;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.item-simples i {
+    font-size: 24px;
+    color: var(--cor-secundaris);
+}
+
+.item-simples:hover {
+    border-color: var(--cor-secundaris);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* --- POSICIONAMENTO FINAL --- */
+.posicionamento-final {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.posicionamento-final h2 {
+    color: var(--cor-primaria);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.posicionamento-final p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.botoes-finais .btn {
+    margin: 0 10px;
+}
+/* --- OBSERVAÇÃO PF --- */
+.observacao-pf {
+    margin-top: 40px;
+    background-color: #f0f7f8;
+    padding: 25px;
+    border-radius: 8px;
+    color: var(--cor-primaria);
+    font-size: 18px;
+    border: 1px solid #dceef1;
+}
+
+.observacao-pf i {
+    color: var(--cor-secundaris);
+    margin-right: 8px;
+}
