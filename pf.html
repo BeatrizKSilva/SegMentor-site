@@ -12,7 +12,7 @@
         <div class="top-bar">
             <div class="container top-container">
                 <div class="logo-container">
-                    <a href="index.html"><img src="logo.jpeg" alt="SegMentor" width="220"></a>
+                    <a href="index.html"><img src="imagens/logo.jpeg" alt="SegMentor" width="220"></a>
                 </div>
                 <div class="contatos-container">
                     <div class="contato-item">
@@ -53,14 +53,24 @@
             <h2 class="titulo-secao">Nossas Proteções</h2>
             
             <div class="grid-simples">
-                <div class="item-simples"><i class="fa-solid fa-car"></i> Automóvel</div>
-                <div class="item-simples"><i class="fa-solid fa-house"></i> Residencial</div>
-                <div class="item-simples"><i class="fa-solid fa-heart-pulse"></i> Vida</div>
-                <div class="item-simples"><i class="fa-solid fa-key"></i> Fiança Locatícia</div>
-                <div class="item-simples"><i class="fa-solid fa-bicycle"></i> Seguro Bike</div>
-                <div class="item-simples"><i class="fa-solid fa-plane"></i> Seguro Viagem</div>
-                <div class="item-simples"><i class="fa-solid fa-mobile-screen"></i> Celular / Equipamentos</div>
-                <div class="item-simples"><i class="fa-solid fa-briefcase"></i> RC Profissional</div>
+                <div class="item-simples" data-tipo="auto"><i class="fa-solid fa-car"></i> Automóvel</div>
+                <div class="item-simples" data-tipo="residencia"><i class="fa-solid fa-house"></i> Residencial</div>
+                <div class="item-simples" data-tipo="vida"><i class="fa-solid fa-heart-pulse"></i> Vida</div>
+                <div class="item-simples" data-tipo="fianca"><i class="fa-solid fa-key"></i> Fiança Locatícia</div>
+                <div class="item-simples" data-tipo="bike"><i class="fa-solid fa-bicycle"></i> Seguro Bike</div>
+                <div class="item-simples" data-tipo="viagem"><i class="fa-solid fa-plane"></i> Seguro Viagem</div>
+                <div class="item-simples" data-tipo="equipamento"><i class="fa-solid fa-mobile-screen"></i> Celular / Equipamentos</div>
+                <div class="item-simples" data-tipo="rc"><i class="fa-solid fa-briefcase"></i> RC Profissional</div>
+            </div>
+
+            <div id="detalhe-container" class="detalhe-container">
+                <div class="detalhe-imagem">
+                    <img id="detalhe-img" src="" alt="Imagem ilustrativa do seguro">
+                </div>
+                <div class="detalhe-texto">
+                    <h3 id="detalhe-titulo">Título</h3>
+                    <p id="detalhe-desc">Descrição do seguro aparecerá aqui.</p>
+                </div>
             </div>
 
             <div class="observacao-pf text-center">
@@ -81,5 +91,7 @@
             </div>
         </div>
     </section>
+
+   <script src="script.js"></script>
 </body>
 </html>

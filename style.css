@@ -267,19 +267,18 @@
 
 /* --- PRODUTOS EM FOCO (PJ) --- */
 .produtos-foco {
-    padding: 40px 20px 60px; /* Aumentamos o topo para 100px para dar mais respiro */
+    padding: 40px 20px 60px;
 }
 
 .grid-foco {
     display: grid;
-    /* Força 4 colunas de tamanhos iguais lado a lado no computador */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 15px; /* Reduz o espaço entre as caixas */
+    gap: 15px; 
 }
 
 .card-foco {
     background-color: #f9f9f9;
-    padding: 20px; /* Reduz o espaço interno da caixa */
+    padding: 20px;
     border-radius: 8px;
     border-top: 5px solid var(--cor-secundaris);
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -291,7 +290,7 @@
 }
 
 .icon-foco {
-    font-size: 28px; /* Ícone um pouco menor */
+    font-size: 28px; 
     color: var(--cor-primaria);
     margin-bottom: 12px;
 }
@@ -299,7 +298,7 @@
 .card-foco h3 {
     color: var(--cor-primaria);
     margin-bottom: 12px;
-    font-size: 18px; /* Título um pouco menor para caber melhor */
+    font-size: 18px; 
 }
 
 .card-foco ul {
@@ -311,7 +310,7 @@
     position: relative;
     margin-bottom: 8px;
     color: #444;
-    font-size: 14px; /* Fonte da lista reduzida */
+    font-size: 14px; 
 }
 
 .card-foco ul li::before {
@@ -322,34 +321,18 @@
     font-weight: bold;
 }
 
-.alerta-tooltip {
-    margin-top: 15px;
-    padding: 8px;
-    background-color: #fdf3e7;
-    border-left: 4px solid #e67e22;
-    color: #d35400;
-    font-size: 12px; /* Fonte do alerta reduzida */
-    border-radius: 0 4px 4px 0;
-}
-
-.grid-simples {
-    display: grid;
-    /* Deixa os itens menores para caberem até 5 lado a lado */
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-}
-
 @media (max-width: 1024px) {
     .grid-foco {
-        grid-template-columns: repeat(2, 1fr); /* 2 lado a lado no tablet */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 600px) {
     .grid-foco {
-        grid-template-columns: 1fr; /* 1 embaixo do outro no celular */
+        grid-template-columns: 1fr; 
     }
 }
+
 .alerta-tooltip {
     margin-top: 15px;
     padding: 10px;
@@ -385,6 +368,7 @@
     align-items: center;
     gap: 10px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .item-simples i {
@@ -420,6 +404,7 @@
 .botoes-finais .btn {
     margin: 0 10px;
 }
+
 /* --- OBSERVAÇÃO PF --- */
 .observacao-pf {
     margin-top: 40px;
@@ -434,4 +419,65 @@
 .observacao-pf i {
     color: var(--cor-secundaris);
     margin-right: 8px;
+}
+
+.item-simples.ativo {
+    border-bottom: 4px solid var(--cor-primaria);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+.detalhe-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding: 30px;
+    background-color:#efefef;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-secundaris);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.detalhe-imagem {
+    flex: 1;
+}
+
+.detalhe-imagem img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detalhe-texto {
+    flex: 2;
+    text-align: left; 
+}
+
+.detalhe-texto h3 {
+    color: var(--cor-primaria);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.detalhe-texto p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade da caixa de detalhes */
+@media (max-width: 768px) {
+    .detalhe-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
