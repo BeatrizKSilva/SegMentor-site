@@ -7,7 +7,7 @@ const dadosProtecoes = {
     'residencia': {
         titulo: 'Seguro Residencial',
         texto: 'Sua casa protegida contra incêndio, roubo, danos elétricos, vendavais e quebra de vidros. Inclui serviços práticos de assistência 24h para o dia a dia, como chaveiro, encanador e eletricista.',
-        imagem: ''
+        imagem: 'imagens/casa_aconchegante.jpg'
     },
     'vida': {
         titulo: 'Seguro de Vida',
@@ -32,7 +32,7 @@ const dadosProtecoes = {
     'equipamento': {
         titulo: 'Celular e Equipamentos',
         texto: 'Proteja seus eletrônicos portáteis (smartphones, notebooks, tablets e câmeras) contra roubo, furto qualificado, quebra acidental e danos por líquidos.',
-        imagem: ''
+        imagem: 'imagens/celular.jpeg'
     },
     'rc': {
         titulo: 'Responsabilidade Civil Profissional',
