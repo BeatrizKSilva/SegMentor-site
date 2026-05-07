@@ -14,32 +14,29 @@
                 <div class="logo-container">
                     <a href="index.html"><img src="imagens/logo.jpeg" alt="SegMentor" width="220"></a>
                 </div>
-<div class="contatos-container">
-    
-    <div class="contato-item">
-        <i class="fa-regular fa-envelope"></i>
-        <div class="contato-texto">
-            <strong>Email</strong>
-            <p>contato@segmentor.com.br</p>
-        </div>
-    </div>
-
-    <div class="contato-item">
-        <i class="fa-solid fa-phone-volume"></i>
-        <div class="contato-texto">
-            <strong>Telefone</strong>
-            <p>(42) 0000-0000</p>
-        </div>
-    </div>
-    <div class="contato-item">
-        <i class="fa-brands fa-whatsapp"></i>
-        <div class="contato-texto">
-            <strong>WhatsApp</strong>
-            <p>(42) 90000-0000</p>
-        </div>
-    </div>
-
-</div>
+                <div class="contatos-container">
+                    <div class="contato-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div class="contato-texto">
+                            <strong>Email</strong>
+                            <p>contato@segmentor.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div class="contato-texto">
+                            <strong>Telefone</strong>
+                            <p>(42) 0000-0000</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div class="contato-texto">
+                            <strong>WhatsApp</strong>
+                            <p>(42) 90000-0000</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -52,10 +49,10 @@
     </section>
 
     <section class="produtos-foco container">
-        <h2 class="titulo-secao"></i> Produtos em Foco</h2>
+        <h2 class="titulo-secao">Produtos em Foco</h2>
         
         <div class="grid-foco">
-            <div class="card-foco">
+            <div class="card-foco card-sombra" data-tipo="engenharia">
                 <div class="icon-foco"><i class="fa-solid fa-helmet-safety"></i></div>
                 <h3>Riscos de Engenharia</h3>
                 <ul>
@@ -65,7 +62,7 @@
                 </ul>
             </div>
 
-            <div class="card-foco">
+            <div class="card-foco card-sombra" data-tipo="garantia">
                 <div class="icon-foco"><i class="fa-solid fa-file-contract"></i></div>
                 <h3>Seguro Garantia</h3>
                 <ul>
@@ -75,7 +72,7 @@
                 </ul>
             </div>
 
-            <div class="card-foco">
+            <div class="card-foco card-sombra" data-tipo="rc_empresas">
                 <div class="icon-foco"><i class="fa-solid fa-scale-balanced"></i></div>
                 <h3>Responsabilidade Civil</h3>
                 <ul>
@@ -85,9 +82,9 @@
                 </ul>
             </div>
 
-            <div class="card-foco">
+            <div class="card-foco card-sombra" data-tipo="transportes">
                 <div class="icon-foco"><i class="fa-solid fa-truck-fast"></i></div>
-                <h3>Seguro de Transportes (Cargas)</h3>
+                <h3>Seguro de Transportes</h3>
                 <ul>
                     <li>Transporte nacional</li>
                     <li>Operações logísticas</li>
@@ -95,17 +92,53 @@
                 </ul>
             </div>
         </div>
+
+        <div id="detalhe-container" class="detalhe-container">
+            <div class="detalhe-imagem">
+                <img id="detalhe-img" src="" alt="Imagem ilustrativa do seguro">
+            </div>
+            <div class="detalhe-texto">
+                <h3 id="detalhe-titulo">Título</h3>
+                <p id="detalhe-desc">Descrição do seguro aparecerá aqui.</p>
+            </div>
+        </div>
     </section>
 
-    <section class="demais-produtos">
+<section class="demais-produtos">
         <div class="container">
             <h2 class="titulo-secao">Demais Soluções PJ</h2>
             <div class="grid-simples">
-                <div class="item-simples"><i class="fa-solid fa-car-side"></i> Frotas (Veículos)</div>
-                <div class="item-simples"><i class="fa-solid fa-tractor"></i> Frotas (Máquinas/Equipamentos)</div>
-                <div class="item-simples"><i class="fa-solid fa-building"></i> Empresarial</div>
-                <div class="item-simples"><i class="fa-regular fa-building"></i> Condomínio</div>
-                <div class="item-simples"><i class="fa-solid fa-shield-halved"></i> Cyber (Riscos Cibernéticos)</div>
+                
+                <div class="item-simples item-estatico">
+                    <i class="fa-solid fa-car-side"></i> 
+                    <span>Frotas (Veículos)</span>
+                    <p class="descricao-extra">Proteção sob medida para a frota da sua empresa, cobrindo colisões, roubo e danos a terceiros com assistência 24h.</p>
+                </div>
+
+                <div class="item-simples item-estatico">
+                    <i class="fa-solid fa-tractor"></i> 
+                    <span>Frotas (Máquinas)</span>
+                    <p class="descricao-extra">Cobertura essencial para o maquinário pesado e agrícola da sua empresa contra danos acidentais, roubo e incêndio.</p>
+                </div>
+
+                <div class="item-simples item-estatico">
+                    <i class="fa-solid fa-building"></i> 
+                    <span>Empresarial</span>
+                    <p class="descricao-extra">Seguro patrimonial completo para o seu negócio. Protege contra incêndio, roubo, danos elétricos e lucros cessantes.</p>
+                </div>
+
+                <div class="item-simples item-estatico">
+                    <i class="fa-regular fa-building"></i> 
+                    <span>Condomínio</span>
+                    <p class="descricao-extra">Seguro obrigatório e complementar para condomínios, cobrindo a estrutura e a responsabilidade civil do síndico.</p>
+                </div>
+
+                <div class="item-simples item-estatico">
+                    <i class="fa-solid fa-shield-halved"></i> 
+                    <span>Cyber Riscos</span>
+                    <p class="descricao-extra">Proteção contra ataques cibernéticos e vazamento de dados (LGPD), resguardando a operação e reputação da empresa.</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -117,10 +150,12 @@
             
             <div class="botoes-finais" style="margin-top: 30px;">
                 <a href="https://wa.me/5542900000000" target="_blank" class="btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Atendimento via WhatsApp
+                    <i class="fa-brands fa-whatsapp"></i> Falar com especialista
                 </a>
             </div>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
