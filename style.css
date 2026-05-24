@@ -85,7 +85,7 @@
 .sobre-imagem img{
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.199);
 }
 
 .areas-atuacao {
@@ -471,7 +471,6 @@
     }
 }
 
-/* ================= ENCERRAMENTO (FOOTER) ================= */
 .encerramento {
     background-color: var(--cor-primaria);
     color: #fff;
@@ -520,4 +519,55 @@
     padding: 20px;
     font-size: 14px;
     color: #ccc;
+}
+
+.parceiros {
+    background-color: #f9f9f9;
+    padding: 60px;
+    overflow: hidden;
+}
+
+.carrossel-parceiros {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.parceiros-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    padding: 15px 0;
+    animation: scroll-parceiros 20s linear infinite;
+}
+
+.parceiros-track:hover {
+    animation-play-state: paused;
+}
+
+.parceiros-track img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(50%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.parceiros-track img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scroll-parceiros {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 20px));
+    }
 }
