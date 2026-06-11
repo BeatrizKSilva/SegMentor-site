@@ -4,6 +4,10 @@
     --cor-secundaris: #328390;
 }
 
+body {
+    background-color: #FDFBF6;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -163,7 +167,7 @@
 /* SEÇÕES DE TEXTO E INSTITUCIONAL */
 .sobre-nos {
     padding: 80px 20px;
-    background-color: #f9f9f9;
+    background-color: #F5F3EB;
 }
 
 .sobre-container {
@@ -199,7 +203,7 @@
 
 .posicionamento-final {
     padding: 80px 20px;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 .posicionamento-final h2 {
@@ -223,7 +227,7 @@
 /* CARDS PRINCIPAIS (HOME)*/
 .areas-atuacao {
     padding: 80px 20px;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 .cards-container {
@@ -356,7 +360,7 @@
 }
 /* DEMAIS PRODUTOS (PESSOA FÍSICA E CAIXAS MENORES) */
 .demais-produtos {
-    background-color: #f0f7f8;
+    background-color: transparent;
     padding: 60px 20px;
 }
 
@@ -535,6 +539,24 @@
         flex-direction: column;
         gap: 20px;
     }
+
+    .carrossel-parceiros {
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        mask-image: none; 
+        -webkit-mask-image: none;
+        padding-bottom: 10px; 
+    }
+
+    .parceiros-track {
+        animation: none; 
+        width: max-content;
+        gap: 20px; 
+    }
+
+    .parceiros-track img:nth-child(n+35) {
+        display: none; 
+    }
 }
 
 @media (max-width: 600px) {
@@ -566,7 +588,7 @@
 }
 
 .parceiros {
-    background-color: #f9f9f9;
+    background-color: #F5F3EB;
     padding: 60px;
     overflow: hidden;
 }
@@ -585,7 +607,7 @@
     gap: 40px;
     width: max-content;
     padding: 15px 0;
-    animation: scroll-parceiros 20s linear infinite;
+    animation: scroll-parceiros 80s linear infinite;
 }
 
 .parceiros-track:hover {
@@ -609,9 +631,9 @@
 
 @keyframes scroll-parceiros {
     0% {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
     100% {
-        transform: translateX(calc(-50% - 20px));
+        transform: translate3d(calc(-50% - 20px), 0, 0);
     }
 }
