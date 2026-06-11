@@ -1,11 +1,6 @@
-/* VARIÁVEIS, RESET E CONFIGURAÇÕES GERAIS */
 :root {
     --cor-primaria: #164f5d;
     --cor-secundaris: #328390;
-}
-
-body {
-    background-color: #FDFBF6;
 }
 
 * {
@@ -108,7 +103,6 @@ body {
 }
 
 /* BANNERS (HERO SECTIONS) */
-/* Hero Home */
 .hero {
     background-color: var(--cor-primaria);
     color: #fff;
@@ -167,7 +161,7 @@ body {
 /* SEÇÕES DE TEXTO E INSTITUCIONAL */
 .sobre-nos {
     padding: 80px 20px;
-    background-color: #F5F3EB;
+    background-color: #f9f9f9;
 }
 
 .sobre-container {
@@ -198,12 +192,12 @@ body {
 .sobre-imagem img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.199);
+    box-shadow: 0 4px 15px rgba(0,0,0,1);
 }
 
 .posicionamento-final {
     padding: 80px 20px;
-    background-color: transparent;
+    background-color: #ffffff;
 }
 
 .posicionamento-final h2 {
@@ -227,7 +221,7 @@ body {
 /* CARDS PRINCIPAIS (HOME)*/
 .areas-atuacao {
     padding: 80px 20px;
-    background-color: transparent;
+    background-color: #ffffff;
 }
 
 .cards-container {
@@ -288,7 +282,7 @@ body {
     font-weight: bold;
 }
 
-/* PRODUTOS EM FOCO (PJ E AGRO) */
+/* PRODUTOS EM FOCO (PJ E AGRO E PF) */
 .produtos-foco {
     padding: 40px 20px 60px;
 }
@@ -296,29 +290,30 @@ body {
 .grid-foco {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 15px; 
+    gap: 20px; 
 }
 
 .card-foco {
-    background-color: #f9f9f9;
-    padding: 20px;
+    background-color: #ffffff; /* Fundo branco puro para destacar do fundo do site */
+    padding: 25px; /* Mais espaço interno como na imagem */
     border-radius: 8px;
-    border-top: 5px solid var(--cor-secundaris);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--cor-secundaris); /* Fita azul no topo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
     transition: transform 0.3s ease, outline 0.3s ease;
-    cursor: pointer; /* Transforma o mouse em mãozinha */
+    cursor: pointer;
+    text-align: left; /* Alinhamento à esquerda exatamente como na imagem */
 }
 
 .icon-foco {
-    font-size: 28px; 
+    font-size: 32px; 
     color: var(--cor-primaria);
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .card-foco h3 {
     color: var(--cor-primaria);
-    margin-bottom: 12px;
-    font-size: 18px; 
+    margin-bottom: 15px;
+    font-size: 20px; 
 }
 
 .card-foco ul {
@@ -326,11 +321,11 @@ body {
 }
 
 .card-foco ul li {
-    padding-left: 18px;
+    padding-left: 20px;
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #444;
-    font-size: 14px; 
+    font-size: 15px; 
 }
 
 .card-foco ul li::before {
@@ -344,6 +339,7 @@ body {
 /* Interações do Card Foco (Hover e Clique) */
 .card-foco:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .card-foco.ativo {
@@ -353,14 +349,9 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.card-foco.card-sombra.ativo {
-    outline: none;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
-}
 /* DEMAIS PRODUTOS (PESSOA FÍSICA E CAIXAS MENORES) */
 .demais-produtos {
-    background-color: transparent;
+    background-color: #f0f7f8;
     padding: 60px 20px;
 }
 
@@ -476,6 +467,7 @@ body {
     margin-right: 8px;
 }
 
+/* ENCERRAMENTO (FOOTER) E WHATSAPP */
 .encerramento {
     background-color: var(--cor-primaria);
     color: #fff;
@@ -539,24 +531,6 @@ body {
         flex-direction: column;
         gap: 20px;
     }
-
-    .carrossel-parceiros {
-        overflow-x: auto; 
-        -webkit-overflow-scrolling: touch; 
-        mask-image: none; 
-        -webkit-mask-image: none;
-        padding-bottom: 10px; 
-    }
-
-    .parceiros-track {
-        animation: none; 
-        width: max-content;
-        gap: 20px; 
-    }
-
-    .parceiros-track img:nth-child(n+35) {
-        display: none; 
-    }
 }
 
 @media (max-width: 600px) {
@@ -585,56 +559,4 @@ body {
     font-weight: normal; 
     line-height: 1.5;
     margin-top: 15px;
-}
-
-.parceiros {
-    background-color: #f9f9f9;
-    padding: 60px;
-    overflow: hidden;
-}
-
-.carrossel-parceiros {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.parceiros-track {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    width: max-content;
-    padding: 15px 0;
-    animation: scroll-parceiros 80s linear infinite;
-    background-color: transparent;
-}
-
-.parceiros-track:hover {
-    animation-play-state: paused;
-}
-
-.parceiros-track img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-    filter: grayscale(50%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.parceiros-track img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-@keyframes scroll-parceiros {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(calc(-50% - 20px), 0, 0);
-    }
 }
