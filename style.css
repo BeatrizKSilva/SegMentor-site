@@ -342,19 +342,13 @@
 /* Interações do Card Foco (Hover e Clique) */
 .card-foco:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .card-foco.ativo {
-    outline: 2px solid var(--cor-primaria);
-    outline-offset: -2px;
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.card-foco.card-sombra.ativo {
-    outline: none;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Sombra um pouco mais forte para mostrar que está clicado */
+    outline: none; /* Esta linha remove a borda escura */
 }
 
 /* DEMAIS PRODUTOS (PESSOA FÍSICA E CAIXAS MENORES) */
