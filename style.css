@@ -588,7 +588,7 @@ body {
 }
 
 .parceiros {
-    background-color: #F5F3EB;
+    background-color: #f9f9f9;
     padding: 60px;
     overflow: hidden;
 }
@@ -608,6 +608,7 @@ body {
     width: max-content;
     padding: 15px 0;
     animation: scroll-parceiros 80s linear infinite;
+    background-color: transparent;
 }
 
 .parceiros-track:hover {
