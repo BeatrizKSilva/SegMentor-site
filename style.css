@@ -527,6 +527,27 @@
     color: #fff;
 }
 
+.btn-formulario {
+    background-color: var(--cor-secundaris);
+    color: #fff;
+    border: 2px solid var(--cor-secundaris);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-formulario i {
+    font-size: 20px;
+}
+
+.btn-formulario:hover {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: #fff;
+    transform: scale(1.05); /* Dá um leve zoom ao passar o mouse */
+}
+
 .copyright {
     background-color: #0d3039;
     padding: 20px;
@@ -580,7 +601,7 @@
 }
 
 .parceiros {
-    background-color: #f9f9f9;
+    background-color: #F5F3EB;
     padding: 60px;
     overflow: hidden;
 }
