@@ -21,6 +21,28 @@
     text-align: center;
 }
 
+/* Evita rolagem horizontal acidental no mobile e garante que imagens nunca estourem o container */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estado de foco visível para acessibilidade (navegação por teclado) */
+a:focus-visible,
+.btn:focus-visible,
+.card:focus-visible,
+.card-foco:focus-visible,
+.item-simples:focus-visible,
+.link-acao:focus-visible {
+    outline: 3px solid var(--cor-secundaris);
+    outline-offset: 3px;
+}
+
 /* BOTÕES GERAIS E LINKS*/
 .btn {
     display: inline-block;
@@ -91,6 +113,8 @@
     padding-left: 30px;
     border-left: 1px solid #e0e0e0;
     font-family: sans-serif;
+    text-decoration: none;
+    color: inherit;
 }
 
 .contato-item:first-child {
@@ -194,7 +218,7 @@
 .sobre-imagem img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .posicionamento-final {
@@ -546,27 +570,6 @@
     color: #ccc;
 }
 
-/* MEDIA QUERIES (RESPONSIVIDADE) */
-@media (max-width: 1024px) {
-    .grid-foco {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-
-    .detalhe-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .grid-foco {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ITENS ESTÁTICOS COM TEXTO (DEMAIS SOLUÇÕES PJ)*/
 .item-estatico {
     cursor: default !important;
@@ -638,5 +641,154 @@
     0% { transform: translate3d(0, 0, 0);
     } 100% {
         transform: translate3d(calc(-50% - 20px), 0, 0);
+    }
+}
+
+/* MEDIA QUERIES (RESPONSIVIDADE) */
+/* IMPORTANTE: este bloco fica no final do arquivo de propósito. Em CSS, quando duas regras
+   têm a mesma especificidade, quem vem depois no arquivo vence — então media queries que
+   sobrescrevem estilos precisam vir depois das regras base que elas ajustam. */
+
+/* Tablets grandes / notebooks pequenos */
+@media (max-width: 1024px) {
+    .grid-foco {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (ex: iPad em pé) */
+@media (max-width: 900px) {
+
+    /* Cabeçalho: logo em cima, contatos embaixo, ao invés de espremer tudo numa linha só */
+    .top-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .contatos-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 12px;
+    }
+
+    /* "Sobre Nós": texto e imagem lado a lado ficam apertados demais, então empilha */
+    .sobre-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .detalhe-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .grid-foco {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduz espaçamentos verticais grandes, pensados originalmente para telas maiores */
+    .sobre-nos,
+    .areas-atuacao,
+    .posicionamento-final,
+    .produtos-foco {
+        padding: 50px 16px;
+    }
+
+    .hero,
+    .hero-interna {
+        padding: 40px 16px;
+    }
+
+    .hero-texto h1 {
+        font-size: 28px;
+    }
+
+    .hero-texto p {
+        font-size: 16px;
+    }
+
+    .hero-interna h1 {
+        font-size: 26px;
+    }
+
+    .hero-interna p {
+        font-size: 16px;
+    }
+
+    .titulo-secao,
+    .sobre-texto h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .parceiros {
+        padding: 40px 15px;
+    }
+
+    /* Logo menor para não competir por espaço com os ícones de contato */
+    .logo-container img {
+        width: 160px;
+        height: auto;
+    }
+
+    /* Contatos do cabeçalho viram apenas ícones clicáveis (toque para ligar/whatsapp/email) */
+    .contato-item {
+        padding-left: 0;
+        border-left: none;
+        gap: 0;
+        padding: 8px;
+    }
+
+    .contato-texto {
+        display: none;
+    }
+
+    /* Botões finais empilhados e com largura total: mais fáceis de tocar no celular */
+    .botoes-finais {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .botoes-finais .btn {
+        margin: 0;
+        width: 100%;
+    }
+
+    .encerramento h2 {
+        font-size: 24px;
+    }
+}
+
+/* Celulares bem pequenos (iPhone SE e similares) */
+@media (max-width: 380px) {
+    .card,
+    .card-foco {
+        padding: 20px;
+    }
+
+    .contatos-container {
+        gap: 8px;
+    }
+}
+
+/* Respeita quem prefere menos animação (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+    .parceiros-track {
+        animation: none;
+    }
+
+    .card-foco,
+    .item-simples,
+    .btn,
+    .link-acao {
+        transition: none;
     }
 }
