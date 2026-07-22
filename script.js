@@ -120,4 +120,30 @@ if (cards.length > 0 && containerDetalhe) {
 
     const cardEngenharia = document.querySelector('[data-tipo="engenharia"]');
     if (cardEngenharia) cardEngenharia.click();
+
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnCopiarEmail = document.getElementById('copiar-email');
+    const toastAviso = document.getElementById('toast-aviso');
+
+    if (btnCopiarEmail && toastAviso) {
+        btnCopiarEmail.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const email = 'segmentorseguros@gmail.com';
+
+            navigator.clipboard.writeText(email).then(() => {
+
+                toastAviso.classList.add('mostrar');
+
+
+                setTimeout(() => {
+                    toastAviso.classList.remove('mostrar');
+                }, 3000);
+            }).catch(err => {
+                console.error('Falha ao copiar o e-mail: ', err);
+            });
+        });
+    }
+});
